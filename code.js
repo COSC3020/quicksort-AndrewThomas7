@@ -21,6 +21,7 @@ function parititon(array,left,right) {
     return i
 }
 
+
 function quicksort(array, left, right) {
     if (array.length <= 1) {
         return array;
