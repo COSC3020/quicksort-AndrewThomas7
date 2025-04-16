@@ -13,7 +13,6 @@ of any Large Language Models. All of the work is my own, except where stated
 otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is
 suspected, charges may be filed against me without prior notice.”-Andrew Thomas
 
-
 Sources
 
 #1-https://www.youtube.com/watch?v=WprjBK0p6rw- This is a video on a quicksort partiiton algorithm. I used this method for my parititon function but did not take any code as the video only shows the process in animation form.
