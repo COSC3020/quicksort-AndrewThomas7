@@ -5,22 +5,6 @@ function Swap(array, first, second) {
     return array;
 }
 
-function partition(array,left,right){
-    var j=left;
-    var i=left-1;
-    var pivot=array[right]
-    while(j<array.indexOf(pivot)){
-        if(array[j]<pivot){
-            i++
-            Swap(array,j,i)
-        }
-        j++;
-    }
-    i++
-    Swap(array,i,array.indexOf(pivot))
-    return i
-}
-
 function quicksort(array) {
     function quicksort_(left,right){
     if(array.length<=1){
@@ -36,19 +20,18 @@ function quicksort(array) {
     }
 
     function partition(left,right){
-        var j=left;
         var i=left-1;
         var pivot=array[right]
-        while(j<array.indexOf(pivot)){
-            if(array[j]<pivot){
+        for(var x=left;x<=right;x++){
+            if(array[x]<=pivot){
                 i++
-                Swap(array,j,i)
+                if(x>i){
+                    Swap(array,i,x)
+                }
             }
-            j++;
         }
-        i++
-        Swap(array,i,array.indexOf(pivot))
-        return i
+        return i;
     }
+
     return quicksort_(0,array.length-1)
 }
