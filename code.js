@@ -50,7 +50,6 @@ function quicksort(array) {
             return array;
         }
         var pivot = parititon(array, left,right);
-        console.log("Pivot: "+pivot)
         if (Sorted(array)!=true) {
             quicksort_(array, left, pivot - 1)
         }
