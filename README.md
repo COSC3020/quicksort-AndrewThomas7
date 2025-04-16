@@ -29,6 +29,14 @@ Analyse the time complexity of your implementation and give a $\Theta$ bound for
 its worst-case runtime. Add your answer, including your reasoning, to this
 markdown file.
 
+# Answer
+
+My Implementation for Iterative Quick-Sort starts off by creating a zero array the size of the array we are sorting. This has a complexity of $O(n)$ The array is created a referene array so we can figure out what parts of the array have already been sorted as we loop. 
+
+Next there are two for-loops running the length of the array. The inner loop sets the left and right variables for the partition function, and since this runs the length of the array there  also has a compelxity of $O(n)$. Note we can drop the operations perfomed by the if statements also inside the inner because they are neglagible when it comes to overall time complexity. The outer loop then takes these set variables and runs the partition function which sorts the array and surpingly also has a time complexity of $O(n)$, we then append the return of the pivot to the refrence array so we know what part of the list is sorted, which also runs n times.
+
+All together we then have $$n+(n\cdot (2n))+n=2n+2n^2=n^2\implies \in \theta(n^2)$$
+
 
 ```Javascript
 function Swap(array, first, second) {
